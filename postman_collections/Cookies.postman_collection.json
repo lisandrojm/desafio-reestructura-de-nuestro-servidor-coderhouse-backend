@@ -1,0 +1,74 @@
+{
+	"info": {
+		"_postman_id": "90060d30-a93c-4aa2-9d23-c94015d3196c",
+		"name": "Cookies",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "27650411",
+		"_collection_link": "https://www.postman.com/lisandrojm/workspace/lisandrojm/collection/27650411-90060d30-a93c-4aa2-9d23-c94015d3196c?action=share&creator=27650411&source=collection_link"
+	},
+	"item": [
+		{
+			"name": "setSignedCookies",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/sessions/setsignedcookies",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"sessions",
+						"setsignedcookies"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getSignedCookies",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/sessions/getsignedcookies",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"sessions",
+						"getsignedcookies"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "deleteSignedCookies",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/sessions/deletesignedcookies",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"sessions",
+						"deletesignedcookies"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

@@ -1,0 +1,32 @@
+{
+	"info": {
+		"_postman_id": "176268f7-fd87-412c-8e89-726fb6dc75c2",
+		"name": "Login",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "27650411",
+		"_collection_link": "https://www.postman.com/lisandrojm/workspace/lisandrojm/collection/27650411-176268f7-fd87-412c-8e89-726fb6dc75c2?action=share&creator=27650411&source=collection_link"
+	},
+	"item": [
+		{
+			"name": "getLogout",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/sessions/logout",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"sessions",
+						"logout"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

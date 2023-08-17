@@ -1,0 +1,56 @@
+{
+	"info": {
+		"_postman_id": "2a1b719f-ed0a-4c6b-baa9-4bb22b376a8b",
+		"name": "Messages API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "27650411",
+		"_collection_link": "https://www.postman.com/lisandrojm/workspace/lisandrojm/collection/27650411-2a1b719f-ed0a-4c6b-baa9-4bb22b376a8b?action=share&creator=27650411&source=collection_link"
+	},
+	"item": [
+		{
+			"name": "addUserMessage",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"user\": \"lisandrojm@gmail.com\",\r\n  \"message\": \"Este es un producto de Postman NUEVO\"\r\n} ",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/adsfdsaf",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"adsfdsaf"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getAllMessages",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "deleteUserMessage",
+			"request": {
+				"method": "DELETE",
+				"header": []
+			},
+			"response": []
+		}
+	]
+}
