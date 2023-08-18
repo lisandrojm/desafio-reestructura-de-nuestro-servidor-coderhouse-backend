@@ -13,7 +13,7 @@ Este repositorio contiene la reestructura de nuestro servidor con las siguientes
 
 ### Configuración de Variables de Entorno (.env)
 
-- La información delicada está almacenada en un archivo .env. Esto nos permite acceder a estos datos a través de variables de entorno, mejorando la seguridad y organización de nuestra aplicación.
+- La información delicada está almacenada en un archivo .env. Permite acceder a estos datos a través de variables de entorno, mejorando la seguridad y organización de nuestra aplicación.
 
 ## Requisitos
 
