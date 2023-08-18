@@ -112,9 +112,9 @@ El proyecto sigue la siguiente estructura de directorios:
 
 - `/src/routes`: Archivos de definición de rutas de la aplicación.
 
-- `/src/utils`: Contiene los archivos relacionados con la configuración de las utilidades reutilizables.
+- `/src/utils`: Archivos relacionados con la configuración de las utilidades reutilizables.
 
-- `/src/views`: Contiene todas las vistas del proyecto.
+- `/src/views`: Todas las vistas del proyecto.
 
 ## Dependencias
 
