@@ -86,7 +86,11 @@ adminCod3r123
 
 ## Video Testing
 
-Video
+
+
+https://github.com/lisandrojm/desafio_reestructura-de-nuestro-servidor/assets/35199683/e86e2e13-fc5a-4095-97eb-02c35f4de08e
+
+
 
 ## Estructura del proyecto (directorios relevantes para el desafío)
 
