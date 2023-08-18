@@ -21,7 +21,7 @@ class AuthController {
 
   login = async (req, res, next) => {
     let { email, password } = req.body;
-    const isAdminLogin = email === config.admin_email && password === config.admin_;
+    const isAdminLogin = email === config.admin_email && password === config.admin_password;
 
     const response = await authServices.login({ email, password, isAdminLogin });
 

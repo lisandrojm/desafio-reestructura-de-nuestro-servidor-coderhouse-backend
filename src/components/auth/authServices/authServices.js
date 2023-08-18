@@ -5,6 +5,7 @@ const { User } = require('../../../models/users');
 const JWTService = require('../../../utils/jwt/jwt');
 const { createHash, isValidPassword } = require('../../../utils/bcrypt/bcrypt');
 const { Cart } = require('../../../models/carts');
+const { config } = require('../../../config');
 class AuthServices {
   /* ///////////////////////////////////// */
   /* Jwt */
@@ -14,21 +15,13 @@ class AuthServices {
       const { first_name, last_name, email, age, password } = payload;
 
       if (!first_name || !last_name || !email || !age || !password) {
-        /* ///////////////////////////////////// */
-        /* generateCustomResponses */
-        /* ///////////////////////////////////// */
-        /* return res.status(500).json({ success: false, error: 'Faltan campos obligatorios' }); */
-        return res.sendServerError('Faltan campos obligatorios');
+        return res.status(500).json({ success: false, error: 'Faltan campos obligatorios' });
       }
 
       const existingUser = await User.findOne({ email: email });
 
       if (existingUser) {
-        /* ///////////////////////////////////// */
-        /* generateCustomResponses */
-        /* ///////////////////////////////////// */
-        /* return res.status(400).json({ success: false, error: 'Ya existe un usuario con el mismo correo electrónico' }); */
-        return res.sendUserError('Ya existe un usuario con el mismo correo electrónico');
+        return res.status(400).json({ success: false, error: 'Ya existe un usuario con el mismo correo electrónico' });
       }
 
       const newUser = new User({
@@ -54,17 +47,9 @@ class AuthServices {
       const token = await JWTService.generateJwt({ id: newUser._id });
       let updatedUser = await User.findByIdAndUpdate(newUser._id, { token }, { new: true });
       console.log('~~~User registrado~~~', updatedUser);
-      /* ///////////////////////////////////// */
-      /* generateCustomResponses */
-      /* ///////////////////////////////////// */
-      /* return res.status(201).json({ success: true, message: 'Usuario agregado correctamente', ...newUser.toObject(), token, payload: data }); */
-      return res.sendCreated('Usuario agregado correctamente', newUser, token, { payload: data });
+      return res.status(201).json({ success: true, message: 'Usuario agregado correctamente', ...newUser.toObject(), token, payload: data });
     } catch (error) {
-      /* ///////////////////////////////////// */
-      /* generateCustomResponses */
-      /* ///////////////////////////////////// */
-      /* return res.status(500).json({ success: false, error: 'Error al agregar el usuario' }); */
-      return res.sendServerError('Error al agregar el usuario');
+      return res.status(500).json({ success: false, error: 'Error al agregar el usuario' });
     }
   };
 
@@ -72,13 +57,10 @@ class AuthServices {
     try {
       if (isAdminLogin) {
         const adminUser = {
-          email: 'adminCoder@coder.com',
+          email: config.admin_email,
           admin: true,
           role: 'admin',
         };
-        /* ///////////////////////////////////// */
-        /* No se utiliza generateCustomResponses en este caso*/
-        /* ///////////////////////////////////// */
         return { status: 200, response: adminUser, isAdminLogin: false };
       } else {
         let user = await User.findOne({
