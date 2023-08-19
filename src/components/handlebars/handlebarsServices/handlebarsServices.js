@@ -24,7 +24,6 @@ class HandlebarsServices {
     } catch (error) {
       return res.status(500).json({ success: false, error: 'Error Handlebars getLogin' });
     }
-    false;
   };
 
   getRegister = async (res) => {
@@ -43,13 +42,6 @@ class HandlebarsServices {
     }
   };
 
-  /*   getUser = async (req, res) => {
-    try {
-      return { success: true, title: 'Perfil', style: 'index.css' };
-    } catch (error) {
-      return res.status(500).json({ success: false, error: 'Error Handlebars getChat' });
-    }
-  }; */
   getUser = async (res) => {
     try {
       return { success: true, title: 'Profile', style: 'index.css' };
