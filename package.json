@@ -1,7 +1,7 @@
 {
   "name": "desafio_reestructura-de-nuestro-servidor",
   "version": "1.0.0",
-  "description": "Desafío del proyecto final del curso de backend de Coderhouse",
+  "description": "Desafío del curso de backend de Coderhouse",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
